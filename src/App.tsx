@@ -14,6 +14,7 @@ function App() {
           <br />
           Welcome!
         </p>
+        { Array(12).fill(0).map((_, index) => (<Card id={index + 1} />)) }
       </main>
     </div>
   );
