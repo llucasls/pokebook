@@ -1,4 +1,5 @@
 import { useState } from '../helpers';
+import './Card.css';
 
 const Card = ({ id }: { id: number }) => {
   const [pokemon, setPokemon] = useState({});
@@ -7,7 +8,7 @@ const Card = ({ id }: { id: number }) => {
     .then((binData) => binData.json())
     .then(setPokemon);
 
-  if (pokemon.name) return <div>{ pokemon.name }</div>;
+  if (pokemon.name) return <div className="card">{ pokemon.name }</div>;
   return <div>{ null }</div>;
 };
 
