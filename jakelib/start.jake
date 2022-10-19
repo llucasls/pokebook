@@ -1,17 +1,17 @@
 const cp = require('child_process');
-const { desc, task } = require('jake');
+const { desc, task, Task } = require('jake');
 
 function handleSIGINT() {
   process.exitCode = 130;
 }
 
-// TODO: create a teardown task to be invoked on handleExit
-// function handleExit() {
-// }
+function handleExit() {
+  Task.teardown.execute();
+}
 
 function runStart() {
   process.on('SIGINT', handleSIGINT);
-  // process.on('exit', handleExit);
+  process.on('exit', handleExit);
 
   cp.spawnSync('node_modules/.bin/react-scripts', ['start'], {
     cwd: '.',
@@ -21,4 +21,4 @@ function runStart() {
 }
 
 desc('start application');
-task('start', runStart);
+task('start', ['setup'], runStart);
