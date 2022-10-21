@@ -1,21 +1,7 @@
-import { useState, getStat } from '../helpers';
-import { PokemonType, PokemonStat } from '../types/pokemon';
+import { useState } from '../helpers';
 import './PokemonCard.css';
-
-const getTypeName = ({ type }: PokemonType) =>
-  <span>{ type.name }</span>;
-
-const getStatAttributes = ({ stat, base_stat }: PokemonStat) =>
-  <div key={ stat.name }>
-    <span>{ getStat(stat.name) }: { base_stat }</span>
-    <br />
-  </div>;
-
-const PokemonTypes = ({ children }: { children: PokemonType[] }) =>
-  <div>{ children.map(getTypeName) }</div>;
-
-const PokemonStats = ({ children }: { children: PokemonStat[] }) =>
-  <div>{ children.map(getStatAttributes) }</div>;
+import PokemonTypes from './PokemonTypes';
+import PokemonStats from './PokemonStats';
 
 function PokemonCard({ id }: { id: number }) {
   const [pokemon, setPokemon] = useState({});
