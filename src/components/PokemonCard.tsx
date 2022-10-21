@@ -17,7 +17,7 @@ const PokemonTypes = ({ children }: { children: PokemonType[] }) =>
 const PokemonStats = ({ children }: { children: PokemonStat[] }) =>
   <div>{ children.map(getStatAttributes) }</div>;
 
-function Card({ id }: { id: number }) {
+function PokemonCard({ id }: { id: number }) {
   const [pokemon, setPokemon] = useState({});
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
   fetch(url)
@@ -36,4 +36,4 @@ function Card({ id }: { id: number }) {
   return <div>{ null }</div>;
 };
 
-export default Card;
+export default PokemonCard;
