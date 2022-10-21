@@ -1,6 +1,6 @@
 import { useState, getStat } from '../helpers';
 import { PokemonType, PokemonStat } from '../types/pokemon';
-import './Card.css';
+import './PokemonCard.css';
 
 const renderPokemonTypes = (types: PokemonType[]) =>
   types.map(({ type }) =>
