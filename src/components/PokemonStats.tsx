@@ -7,7 +7,7 @@ const getStatAttributes = ({ stat, base_stat }: PokemonStat) =>
     <br />
   </div>;
 
-const PokemonStats = ({ children }: { children: PokemonStat[] }) =>
-  <div>{ children.map(getStatAttributes) }</div>;
+const PokemonStats = ({ stats }: { stats: PokemonStat[] }) =>
+  <div>{ stats.map(getStatAttributes) }</div>;
 
 export default PokemonStats;

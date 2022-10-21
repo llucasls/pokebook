@@ -15,8 +15,8 @@ function PokemonCard({ id }: { id: number }) {
       <div>{ pokemon.id }</div>
       <img src={ pokemon.sprites.front_default } alt={ `${pokemon.name} facing the player` } />
       <div>{ pokemon.name }</div>
-      <PokemonTypes>{ pokemon.types }</PokemonTypes>
-      <PokemonStats>{ pokemon.stats }</PokemonStats>
+      <PokemonTypes types={ pokemon.types } />
+      <PokemonStats stats={ pokemon.stats } />
     </div>
   );
   return <div>{ null }</div>;
