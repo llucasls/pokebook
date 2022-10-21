@@ -10,7 +10,7 @@ const renderPokemonStats = (stats: PokemonStat[]) =>
   stats.map(({ stat, base_stat }) =>
     <div key={ stat.name }><span>{getStat(stat.name)}: {base_stat}</span><br /></div>);
 
-const Card = ({ id }: { id: number }) => {
+function Card({ id }: { id: number }) {
   const [pokemon, setPokemon] = useState({});
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
   fetch(url)
