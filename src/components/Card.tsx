@@ -3,12 +3,12 @@ import { PokemonType, PokemonStat } from '../types/pokemon';
 import './Card.css';
 
 const renderPokemonTypes = (types: PokemonType[]) =>
-  types.map(({ type }, index) =>
-    <span key={ index }>{ type.name }</span>);
+  types.map(({ type }) =>
+    <span key={ type.name }>{ type.name }</span>);
 
 const renderPokemonStats = (stats: PokemonStat[]) =>
-  stats.map(({ stat, base_stat }, index) =>
-    <div key={ index }><span>{getStat(stat.name)}: {base_stat}</span><br /></div>);
+  stats.map(({ stat, base_stat }) =>
+    <div key={ stat.name }><span>{getStat(stat.name)}: {base_stat}</span><br /></div>);
 
 const Card = ({ id }: { id: number }) => {
   const [pokemon, setPokemon] = useState({});
