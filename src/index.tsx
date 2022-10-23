@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Construction from './pages/Construction';
+import Pokemon from './pages/Pokemon';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,6 +18,7 @@ root.render(
       <Routes>
         <Route path="/" element={ <Home /> } />
         <Route path="/pokemonlist" element={ <PokemonList /> } />
+        <Route path="/pokemon/:id" element={ <Pokemon /> } />
         <Route path="/details" element={ <Construction /> } />
         <Route path="/routes" element={ <Construction /> } />
         <Route path="/moves" element={ <Construction /> } />
