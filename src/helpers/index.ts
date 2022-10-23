@@ -1,9 +1,9 @@
 import { useState as reactUseState, Dispatch, SetStateAction } from 'react';
 
-type UseState<T> = [T, Dispatch<SetStateAction<T>>];
+type UseStateHook<T> = [T, Dispatch<SetStateAction<T>>];
 
 export function useState(initialState: any) {
-  return reactUseState(initialState) as UseState<typeof initialState>;
+  return reactUseState(initialState) as UseStateHook<typeof initialState>;
 }
 
 const stats: { [key: string]: string } = {
