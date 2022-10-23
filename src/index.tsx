@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import PokemonList from './pages/PokemonList';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NotFound from './pages/NotFound';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,6 +16,7 @@ root.render(
       <Routes>
         <Route path="/" element={ <Home /> } />
         <Route path="/pokemonlist" element={ <PokemonList /> } />
+        <Route path="*" element={ <NotFound /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
