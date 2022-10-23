@@ -5,10 +5,10 @@ function NavBar() {
     <nav>
       <NavButton label="Home" path="/" />
       <NavButton label="Pokemon List" path="/pokemonlist" />
-      <NavButton label="Details" path="/" />
-      <NavButton label="Routes" path="/" />
-      <NavButton label="Moves" path="/" />
-      <NavButton label="Evolutions" path="/" />
+      <NavButton label="Details" path="/details" />
+      <NavButton label="Routes" path="/routes" />
+      <NavButton label="Moves" path="/moves" />
+      <NavButton label="Evolutions" path="/evolutions" />
     </nav>
   );
 }
