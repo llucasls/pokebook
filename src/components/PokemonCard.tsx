@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState } from '../helpers';
 import './PokemonCard.css';
 import PokemonTypes from './PokemonTypes';
@@ -6,8 +7,8 @@ import PokemonStats from './PokemonStats';
 function PokemonCard({ id }: { id: number }) {
   const [pokemon, setPokemon] = useState({});
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-  fetch(url)
-    .then((binData) => binData.json())
+  axios(url)
+    .then((response) => response.data)
     .then(setPokemon);
 
   if (pokemon.name) return (
