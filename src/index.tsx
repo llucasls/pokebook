@@ -23,6 +23,7 @@ root.render(
         <Route path="/routes" element={ <Construction /> } />
         <Route path="/moves" element={ <Construction /> } />
         <Route path="/evolutions" element={ <Construction /> } />
+        <Route path="/404" element={ <NotFound /> } />
         <Route path="*" element={ <NotFound /> } />
       </Routes>
     </BrowserRouter>
