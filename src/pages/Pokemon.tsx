@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from '../helpers';
 import { useParams, useNavigate } from 'react-router-dom';
+import './Pokemon.css';
 
 function Pokemon() {
   const { id } = useParams();
@@ -12,7 +13,11 @@ function Pokemon() {
     .then(setPokemon)
     .catch(() => navigate("/404"));
 
-  if (pokemon.name) return <span>name: { pokemon.name }</span>;
+  if (pokemon.name) return (
+    <main>
+      <span>name: { pokemon.name }</span>
+    </main>
+  );
   return <span />;
 }
 
