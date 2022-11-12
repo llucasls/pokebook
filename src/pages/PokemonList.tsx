@@ -7,7 +7,7 @@ function PokemonList() {
   return (
     <div className="App">
       <NavBar />
-      <main>
+      <main className="pokemon-list">
         { Array(12).fill(0).map((_, index) => (<PokemonCard id={index + 1} key={index + 1} />)) }
       </main>
     </div>
