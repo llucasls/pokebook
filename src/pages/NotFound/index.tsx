@@ -1,4 +1,4 @@
-import NavBar from '../components/NavBar';
+import NavBar from '../../components/NavBar';
 
 function NotFound() {
   return (
@@ -6,7 +6,7 @@ function NotFound() {
       <NavBar />
       <main className="App-header">
         <img
-          src="sadPikachu.jpg"
+          src="../sadPikachu.jpg"
           alt="pikachu with lowered ears and a sad face, looking disappointed"
         />
         <h3>The page you were looking for does not exist</h3>

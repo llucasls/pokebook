@@ -1,7 +1,7 @@
-import '../App.css';
-import './PokemonList.css';
-import PokemonCard from '../components/PokemonCard';
-import NavBar from '../components/NavBar';
+import '../../App.css';
+import './style.css';
+import PokemonCard from '../../components/PokemonCard';
+import NavBar from '../../components/NavBar';
 
 function PokemonList() {
   return (

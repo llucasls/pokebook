@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { useState } from '../helpers';
+import { useState } from '../../helpers';
 import { useParams, useNavigate } from 'react-router-dom';
-import './Pokemon.css';
+import './style.css';
 
 function Pokemon() {
   const { id } = useParams();
