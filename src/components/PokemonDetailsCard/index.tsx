@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useState } from '../../helpers';
-import './PokemonCard.css';
 import PokemonTypes from '../PokemonTypes';
 import PokemonStats from '../PokemonStats';
 
