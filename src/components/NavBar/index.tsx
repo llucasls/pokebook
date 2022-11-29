@@ -1,4 +1,4 @@
-import NavButton from './NavButton';
+import NavButton from '../NavButton';
 
 function NavBar() {
   return (

@@ -1,4 +1,4 @@
-import { PokemonType } from '../types/pokemon';
+import { PokemonType } from '../../types/pokemon';
 
 const getTypeName = ({ type }: PokemonType) =>
   <span key={ type.name }>{ type.name }</span>;

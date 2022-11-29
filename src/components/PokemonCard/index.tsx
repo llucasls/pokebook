@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { useState } from '../helpers';
-import './PokemonCard.css';
-import PokemonTypes from './PokemonTypes';
-import PokemonStats from './PokemonStats';
+import { useState } from '../../helpers';
+import './style.css';
+import PokemonTypes from '../PokemonTypes';
+import PokemonStats from '../PokemonStats';
 
 function PokemonCard({ id }: { id: number }) {
   const [pokemon, setPokemon] = useState({});

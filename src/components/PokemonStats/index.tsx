@@ -1,5 +1,5 @@
-import { PokemonStat } from '../types/pokemon';
-import { getStat } from '../helpers';
+import { PokemonStat } from '../../types/pokemon';
+import { getStat } from '../../helpers';
 
 const getStatAttributes = ({ stat, base_stat }: PokemonStat) =>
   <div key={ stat.name }>
