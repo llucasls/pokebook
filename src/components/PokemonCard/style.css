@@ -2,6 +2,7 @@
   background-color: #d9d9d9;
   padding: 0.4em;
   margin: 0.4em;
+  border-radius: 0.7em;
   font-size: calc(10px + 2vmin);
   color: #313131;
   display: flex;
