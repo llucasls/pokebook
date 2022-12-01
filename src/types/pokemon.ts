@@ -24,7 +24,21 @@ export interface PokemonGameIndex {
 
 export type PokemonHeight = number;
 
-export type PokemonHeldItem = [];
+interface VersionDetails {
+  rarity: number;
+  version: {
+    name: string;
+    url: string;
+  }
+}
+
+export interface PokemonHeldItem {
+  item: {
+    name: string;
+    url: string;
+  }
+  version_details: VersionDetails[];
+}
 
 export type PokemonId = number;
 
@@ -32,7 +46,7 @@ export type PokemonIsDefault = boolean;
 
 export type PokemonLocationAreaEncounters = string;
 
-interface VersionGroup {
+interface VersionGroupDetails {
   level_learned_at: number;
   move_learn_method: {
     name: string;
@@ -49,14 +63,20 @@ export interface PokemonMove {
     name: string;
     url: string;
   }
-  version_group_details: VersionGroup[];
+  version_group_details: VersionGroupDetails[];
 }
 
 export type PokemonName = string;
 
 export type PokemonOrder = number;
 
-export type PokemonPastTypes = [];
+interface PokemonPastType {
+  generation: {
+    name: string;
+    url: string;
+  }
+  types: PokemonType[];
+}
 
 export interface PokemonSpecies {
   name: string;
@@ -142,3 +162,26 @@ export interface PokemonType {
 }
 
 export type PokemonWeight = number;
+
+interface Pokemon {
+  abilities: PokemonAbility[];
+  base_experience: PokemonBaseExperience;
+  forms: PokemonForm;
+  game_indices: PokemonGameIndex;
+  height: PokemonHeight;
+  held_items: PokemonHeldItem[];
+  id: PokemonId;
+  is_default: PokemonIsDefault;
+  location_area_encounters: PokemonLocationAreaEncounters;
+  moves: PokemonMove[];
+  name: PokemonName;
+  order: PokemonOrder;
+  past_types: PokemonPastType[];
+  species: PokemonSpecies;
+  sprites: PokemonSprites;
+  stats: PokemonStat[];
+  types: PokemonType[];
+  weight: PokemonWeight;
+}
+
+export default Pokemon;
