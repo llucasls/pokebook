@@ -1,17 +1,10 @@
-import axios from 'axios';
-import { useState } from '../../helpers';
+import './style.css';
 import PokemonTypes from '../PokemonTypes';
 import PokemonStats from '../PokemonStats';
 
-function PokemonDetailsCard({ id }: { id: number }) {
-  const [pokemon, setPokemon] = useState({});
-  const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-  axios(url)
-    .then((response) => response.data)
-    .then(setPokemon);
-
+function PokemonDetailsCard({ pokemon }: any) {
   if (pokemon.name) return (
-    <div className="card">
+    <div className="pokemon-details-card">
       <div>{ pokemon.id }</div>
       <img src={ pokemon.sprites.front_default } alt={ `${pokemon.name} facing the player` } />
       <div>{ pokemon.name }</div>
