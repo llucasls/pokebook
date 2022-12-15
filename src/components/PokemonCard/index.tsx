@@ -12,7 +12,7 @@ function PokemonCard({ id }: { id: number }) {
     .then(setPokemon);
 
   if (pokemon.name) return (
-    <div className="card">
+    <div className="pokemon-card">
       <div>{ pokemon.id }</div>
       <img src={ pokemon.sprites.front_default } alt={ `${pokemon.name} facing the player` } />
       <div>{ pokemon.name }</div>
