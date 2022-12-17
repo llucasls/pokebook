@@ -1,11 +1,12 @@
 import axios from 'axios';
-import { useState } from '../../helpers';
+import { useState, UseStateHook } from '../../helpers';
 import './style.css';
 import PokemonTypes from '../PokemonTypes';
 import PokemonStats from '../PokemonStats';
+import Pokemon from '../../types/pokemon';
 
 function PokemonCard({ id }: { id: number }) {
-  const [pokemon, setPokemon] = useState({});
+  const [pokemon, setPokemon] = useState({}) as UseStateHook<Pokemon>;
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
   axios(url)
     .then((response) => response.data)
