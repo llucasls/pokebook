@@ -2,7 +2,7 @@ import { useState as reactUseState, Dispatch, SetStateAction } from 'react';
 
 export type UseStateHook<T> = [T, Dispatch<SetStateAction<T>>];
 
-export function useState(initialState: any) {
+export function useState(initialState: unknown) {
   return reactUseState(initialState) as UseStateHook<typeof initialState>;
 }
 
