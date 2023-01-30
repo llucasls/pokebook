@@ -1,0 +1,12 @@
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+nav div {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  background-color: blue;
+}
