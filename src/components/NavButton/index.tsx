@@ -8,7 +8,7 @@ interface NavButtonProps {
 function NavButton({ label, path }: NavButtonProps) {
   return (
     <Link to={ path }>
-      <button>{ label }</button>
+      <button type="button">{ label }</button>
     </Link>
   );
 }
