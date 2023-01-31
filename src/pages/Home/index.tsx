@@ -9,7 +9,7 @@ function Home() {
           <Link to="/pokemonlist">
             <img
                 alt="Squirtle happily walking with arms and legs wide open"
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg"
+                src="squirtle.svg"
             />
           </Link>
           <br />
